@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Covid Vaccine Tracker</title>
+        <link href="styles/style.css" rel="stylesheet"> <!--reference the style sheet-->
+        <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Covid Vaccine Tracker</h1> <!--big heading-->
+        <h2></h2> <!--empty size 2 header container-->
+        <p>Hello, welcome to the Corona Virus Vaccine tracker site, a registry of recipients of Corona Virus vaccines. </p>
+        <p>You can also check out the people who have also self reported their vaccination. </p>
+        <p> ## Random: maybe put table on another html, and show a summary of the tracker on this page ie: total vaccinations, vaccinations by type vaccines tracked etc.##</p>
+        <p>The information we require from you includes:</p>
+        <ol> <!--an ordered list, ul for unordered list-->
+            <li>Name</li> <!--li containers for each list item-->
+            <li>Surname</li>
+            <li>Date of vaccination</li>
+            <li>Vaccine administered</li>
+            <li>Place of vaccination</li>
+        </ol>
+        <p>Please enter this information in the form below</p>
+        <!--Use for basic forms template-->
+        <!--https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_text-->
+        
+        <!--add different elements to forms eg: dropdown list, text box, check boxes etc-->
+        <!--https://www.w3schools.com/html/html_form_elements.asp-->
+        
+        <!--input types such as text, date, password and other wonderful things that come with predefined workings for forms-->
+        <!--https://www.w3schools.com/html/html_form_input_types.asp-->
+
+        <!--for setting attributes of the form elements, eg: setting restrictions on date entered; placeholders-->
+        <!--https://www.w3schools.com/html/html_form_attributes.asp-->
+        <!--Note: may need to set form attribute to be able to handle form submission if using submit type for button-->
+        <form name="SRForm"> 
+            <fieldset> <!--this adds a nice box around the form-->
+                <legend>Vaccination self report form</legend> <!--the legend gives the box a title-->
+                <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Enter Name"><br>
+                <label for="sname">Surname:</label><br>
+                <input type="text" id="sname" name="sname" placeholder="Enter Surname"><br>
+                <label for="date">Date of vaccination:</label><br>
+                <input type="date" id="datum" name="datum" min="2019-12-01" ><br> <!--a bit of error handling-->
+                <label for="Vaxadmin">Vaccine administered:</label><br>
+                <select id="Vaxadmin" name="Vaxadmin">
+                    <option value="RND" selected>Select Vaccine</option>
+                    <option value="AZ">AstraZeneca</option>
+                    <option value="JJ">Johnson&Johnson</option>
+                    <option value="MD">Moderna</option>
+                    <option value="PBnJ">Pfizer-BioNTech</option>
+                    <option value="OW">Other</option>
+                </select> <br>
+                <label for="Pvax">Place of vaccination:</label><br>
+                <input type="text" id="pvax" name="pvax" placeholder="Enter address"><br>
+                <button type="submit" id="Submit" value="Submit" onclick=form_sub2()>Submit</button> <!--or use button for type, may get away with it-->
+                </fieldset>
+            </form>
+            <br>
+            <br>
+            <p id="SelfReports">This is supposed to change</p>
+    </body>
+    <br>
+    <!--<button id="clickbut">click me!</button>-->
+    <br>
+    <br>
+    <script src="scripts/main.js"></script>
+</html>
