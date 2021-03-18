@@ -46,50 +46,59 @@ myButton.onclick=function(){
 }
 */
 
+var n=1;
+var x=0;
 
-let SF=document.getElementById('SelfReports');
+//for condensed code use
+var n_string=["fname","sname","date","Vaxadmin","pvax"];
+var storageOb=[];
 
-function form_sub(){ // Note: selfreports do not persist over page refresh which happens after submit
-	let fname=document.forms['SRForm']['fname'].value;
-	let sname=document.forms['SRForm']['sname'].value;
-	let dt=document.forms['SRForm']['datum'].value;
-	let vac=document.forms['SRForm']['Vaxadmin'].value;
-	let plc=document.forms['SRForm']['pvax'].value;
-	SF.innerHTML=`Your name is: ${fname} ${sname} and you got vaccinated with the ${vac} vaccine at ${plc} on the date ${dt}.`;
-}
+/*
+//This could be condensed into 2d array
+var names=[];
+var surnames=[];
+var dates=[];
+var vac=[];
+var place=[];
+function form_sub(){ 
+	let AddRown=document.getElementById('tbl');
+	let NewRow=AddRown.insertRow(1);
+//this could be condensed if 2d array of names
+	names[x]=document.getElementById('fname').value;
+	surnames[x]=document.getElementById('sname').value;
+	dates[x]=document.getElementById('date').value;
+	vac[x]=document.getElementById('Vaxadmin').value;
+	place[x]=document.getElementById('pvax').value;
 
-if(!sessionStorage.getItem('num')){
-	//init_vals();
-	sessionStorage.setItem('num', 0);
-}else{
-	let nme_var=JSON.parse(sessionStorage.getItem('num'));
-	let entry=[];
-	if(nme_var>0){
-		for (let i=1;i<=nme_var;i++){
-			entry=JSON.parse(sessionStorage.getItem(`${i}`));
-			set_values(entry);
-			SF.innerHTML=`<br>Your name is: ${entry[0]} ${entry[1]} and you got vaccinated with the ${entry[3]} vaccine at ${entry[4]} on the date ${entry[2]}.`;
-		}
-	}
-}
-/*function init_vals(){
-	sessionStorage.setItem('num', 0); // maybe use to set table headers instead?
-}*/
+// check if condensable again
+	let cell1=NewRow.insertCell(0);
+	let cell2=NewRow.insertCell(1);
+	let cell3=NewRow.insertCell(2);
+	let cell4=NewRow.insertCell(3);
+	let cell5=NewRow.insertCell(4);
 
-/*function set_values(x){
-	SF.innerHTML=`Your name is: ${x[0]} ${x[1]} and you got vaccinated with the ${x[3]} vaccine at ${x[4]} on the date ${x[2]}.`;
+	cell1.innerHTML=names[x];
+	cell2.innerHTML=surnames[x];
+	cell3.innerHTML=dates[x];
+	cell4.innerHTML=vac[x];
+	cell5.innerHTML=place[x];
+	n++;
+	x++;
+
+	return false;
 }
 */
-function form_sub2(){ //can probably directly store rather than set to variables first
-	let nme_var=JSON.parse(sessionStorage.getItem('num'))+1;
-	let names=document.forms['SRForm']['fname'].value;
-	let surnames=document.forms['SRForm']['sname'].value;
-	let dates=document.forms['SRForm']['datum'].value;
-	let vaccination=document.forms['SRForm']['Vaxadmin'].value;
-	let place=document.forms['SRForm']['pvax'].value;
-	let storeObject=[names,surnames,dates,vaccination,place];	
-	sessionStorage.setItem(nme_var,JSON.stringify(storeObject));
+
+function condensed_formsub(){
+	var AddRown=document.getElementById('tbl');
+	var NewRow=AddRown.insertRow(1);
+	var temp=[];
+	for (let i=0;i<n_string.length;i++){
+		temp[i]=document.getElementById(n_string[i]).value;
+		NewRow.insertCell(i).innerHTML=temp[i];
+	}
+	storageOb[x]=temp;
+	n++;
+	x++;
+	return false;
 }
-
-
-

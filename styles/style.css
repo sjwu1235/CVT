@@ -12,18 +12,32 @@ h1{
     /*margin:0*/
     /*padding:20pc 0;*/ /*some additional code*/
 }
-
-p, li{
+p, th, tr{
     color: grey;
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
 }
-/*styling the body CSS works in boces*/
+li, input, label, select, option{
+    color: black;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+legend{
+    color: black;
+    font-size: 25px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+
+/*styling the body CSS works in boxes*/
 body { 
     width: 600px;
     margin: 0 auto; /*first value for top and bottom side, second value for left and right*/
-    background-color: rgb(198, 209, 223) /* set a bit lighter than header bon*/
+    background-color: rgb(198, 209, 223); /* set a bit lighter than header bon*/
     padding: 0 20px 20px 20px; /* padding set top right bottom left*/
     border: 5px solic black; /* black border on all sides*/
 }
