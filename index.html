@@ -23,15 +23,15 @@
         <!--for setting attributes of the form elements, eg: setting restrictions on date entered; placeholders-->
         <!--https://www.w3schools.com/html/html_form_attributes.asp-->
         <!--Note: may need to set form attribute to be able to handle form submission if using submit type for button-->
-        <form name="SRForm" method="post" onsubmit="return condensed_formsub();"> 
+        <form id="SRForm" name="SRForm" method="post" onsubmit="return condensed_formsub();"> 
             <fieldset> <!--this adds a nice box around the form-->
                 <legend>Vaccination self report form</legend> <!--the legend gives the box a title-->
                 <label for="fname">Name:</label><br>
-                <input type="text" id="fname" name="fname" value="" placeholder="Enter Name"><br>
+                <input type="text" id="fname" name="fname" placeholder="Enter Name"/><br>
                 <label for="sname">Surname:</label><br>
-                <input type="text" id="sname" name="sname" value="" placeholder="Enter Surname"/><br>
+                <input type="text" id="sname" name="sname" placeholder="Enter Surname"/><br>
                 <label for="date">Date of vaccination:</label><br>
-                <input type="date" id="date" name="date" min="2020-01-01" value=""><br> <!--a bit of error handling: set a min date-->
+                <input type="date" id="date" name="date" min="2020-01-01" /><br> <!--a bit of error handling: set a min date-->
                 <label for="Vaxadmin">Vaccine administered:</label><br>
                 <select id="Vaxadmin" name="Vaxadmin">
                     <option value="" selected>Select Vaccine</option>
@@ -42,14 +42,14 @@
                     <option value="Other">Other</option>
                 </select> <br>
                 <label for="pvax">Place of vaccination:</label><br>
-                <input type="text" id="pvax" name="pvax" value="" placeholder="Enter address"><br><br>
+                <input type="text" id="pvax" name="pvax" placeholder="Enter address"/><br><br>
                 <input type="submit" value="Submit"/> <!--or use button for type, may get away with it-->
                 </fieldset>
             </form>
             <br>
             <br>
             <table style="width:100%" id="tbl">
-                <tr>
+                <tr style="text-align: left;">
                   <th>Firstname</th>
                   <th>Surname</th>
                   <th>Vacinnation date</th>

@@ -54,6 +54,7 @@ var n_string=["fname","sname","date","Vaxadmin","pvax"];
 var storageOb=[];
 
 /*
+//this is uncondensed code for the table update
 //This could be condensed into 2d array
 var names=[];
 var surnames=[];
@@ -84,7 +85,7 @@ function form_sub(){
 	cell5.innerHTML=place[x];
 	n++;
 	x++;
-
+	document.getElementById('SRForm').reset();
 	return false;
 }
 */
@@ -100,5 +101,8 @@ function condensed_formsub(){
 	storageOb[x]=temp;
 	n++;
 	x++;
+	document.getElementById('SRForm').reset();
 	return false;
 }
+//send in temp array to be evaluated for any info
+function validate(x){}
