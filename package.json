@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "CVT stands for Covid Vaccine Tracker. It is a html page that is able to record self reports of individual vaccinations",
   "main": "app.js",
-  "start": "node app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sjwu1235/CVT.git"
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/sjwu1235/CVT#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {}
 }
