@@ -1,10 +1,10 @@
 # CVT
 
-CVT stands for Covid Vaccine Tracker. It is a html page that is able to record self reports of individual vaccinations
+CVT stands for Covid Vaccine Tracker. It is a html page that is able to record self reports of individual vaccinations. Currently runs on Node.js.
 
 ## Installation
 
-Installation not necessary. Currently local page only.
+Requires installation of node.js. Currently local page only. 
 To view please download files CVT.html, scripts/main.js and styles/style.css 
 
 ## Contributing
