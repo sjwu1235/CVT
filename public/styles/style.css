@@ -1,11 +1,13 @@
 html{
-    background-color: lightsteelblue;
     font-size: 10px;
-    font-family: 'Ranchers', cursive;
+    font-family: 'Anton', cursive;
+    height: 100%;
+    background-image: url("../images/seamless2.jpg");
 }
 
 h1{
     font-size: 60px;
+
     color: black;
     text-align: center;
     text-shadow: 3px; /* four values: horizontal offset, vertical offset, blur radius, bas colour of shadprw*/
@@ -13,7 +15,7 @@ h1{
     /*padding:20pc 0;*/ /*some additional code*/
 }
 p, th, tr{
-    color: grey;
+    color: black;
     font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
@@ -34,13 +36,18 @@ legend{
 
 
 /*styling the body CSS works in boxes*/
+/*background: rgba(255, 165, 0, 0.73)*/
+
 body { 
-    width: 600px;
+    
+    background: rgba(218, 219, 223, 0.73);
+    width: 80%;
     margin: 0 auto; /*first value for top and bottom side, second value for left and right*/
-    background-color: rgb(198, 209, 223); /* set a bit lighter than header bon*/
+    /*background-color: lightgray; /* set a bit lighter than header bon*/
     padding: 0 20px 20px 20px; /* padding set top right bottom left*/
-    border: 5px solic black; /* black border on all sides*/
+    /*border: 5px solic black; /* black border on all sides*/
 }
+
 
 img{
     display: block; /* giving margin block-level behavious like a body so that it can be given a border*/
