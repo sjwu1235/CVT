@@ -10,6 +10,11 @@
         <h1>Covid Vaccine Tracker</h1> <!--big heading-->
         <h2 id="insertSm"></h2> <!--empty size 2 header container-->
         <p>Welcome to the Corona Virus Vaccine tracker site, a registry of recipients of Corona Virus vaccines. Please fill out the form below.</p>
+        
+        <h2>Blockchain Setup</h2>
+        <button class="enableEthereumButton">Enable Ethereum</button> 
+        <h2>Account: <span class="showAccount"></span></h2>
+        
         <form id="SRForm" name="SRForm" method="post" onsubmit="return condensed_formsub();" action="/"> 
             <fieldset> <!--this adds a nice box around the form-->
                 <legend>Vaccination self report form</legend> <!--the legend gives the box a title-->
@@ -44,6 +49,7 @@
                     <th>Vacinnation date</th>
                     <th>Vaccine</th>
                     <th>Place</th>
+                    <th>Blockchain</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,6 +60,13 @@
                           <td><%= user.date %></td>
                           <td><%= user.vaccine %></td>
                           <td><%= user.place %></td>
+                          <td><a  href="javascript:void(0);" class="btn btn-xs btn-success blockchain addUserToBlockchainBtn"
+                                data-fname="<%= user.Name%>"
+                                data-lname="<%=user.Surname%>"
+                                data-date="<%=user.date%>"
+                                data-Vaxadmin="<%=user.vaccine%>"
+                                data-pvax="<%user.place%>">
+                                Add to Blockchain</a> </td>
                         </tr>
                       <% } %>
                 </tbody>
@@ -63,6 +76,9 @@
     <!--<button id="clickbut">click me!</button>-->
     <br>
     <br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery from Google Content Delivery Network (CDN)-->
+    <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js" 
+    charset="utf-8" type="text/javascript"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/blockchain.js"></script>
 </html>
-
