@@ -41,7 +41,7 @@
             <br>
 
 
-            <table style="width:100%" id="tbl">
+         <table style="width:100%" id="tbl">
                 <thead>
                     <tr style="text-align: left;">
                     <th>Firstname</th>
@@ -61,16 +61,18 @@
                           <td><%= user.vaccine %></td>
                           <td><%= user.place %></td>
                           <td><a  href="javascript:void(0);" class="btn btn-xs btn-success blockchain addUserToBlockchainBtn"
-                                data-fname="<%= user.Name%>"
-                                data-lname="<%=user.Surname%>"
-                                data-date="<%=user.date%>"
-                                data-Vaxadmin="<%=user.vaccine%>"
-                                data-pvax="<%user.place%>">
+                                data-fname="<%= user.Name %>"
+                                data-lname="<%=user.Surname %>"
+                                data-date="<%=user.date %>"
+                                data-Vaxadmin="<%=user.vaccine %>"
+                                data-pvax="<%=user.place %>">
                                 Add to Blockchain</a> </td>
                         </tr>
                       <% } %>
                 </tbody>
               </table>
+
+
     </body>
     <br>
     <!--<button id="clickbut">click me!</button>-->

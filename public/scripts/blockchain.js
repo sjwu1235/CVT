@@ -308,11 +308,11 @@ const isMetaMaskInstalled = () => {
     // function Add to Blockchain
     async function addVaccineToBlockchain() {
       //day1 user form data
-      var fname = $(this).data("fname");
-      var sname = $(this).data("sname");
-      var date = $(this).data("date");
-      var Vaxadmin = $(this).data("Vaxadmin");
-      var pvax = $(this).data("pvax");
+      var fname = $(this).attr('data-fname');
+      var sname = $(this).attr('data-lname');
+      var date = $(this).attr('data-date');
+      var Vaxadmin = $(this).attr('data-Vaxadmin');
+      var pvax = $(this).attr('data-pvax');
 
 /*
       var fname = "joe";
